@@ -1,7 +1,7 @@
 <div class="row" *ngIf="message!=''">{{this.message}}</div>
-<div class="container mt-2" *ngIf="loggedIn==false">
-  <h2>Whoops! You must be logged in to shop!</h2>
-  <h3><a href="/login">Click here to login.</a></h3>
+<div class="container mt-5" *ngIf="loggedIn==false">
+  <h3>Whoops! You must be logged in to shop!</h3>
+  <h4><a href="/login">Click here to login.</a></h4>
 </div>
 <div class="row card-group" *ngIf="loggedIn==true">
     <!-- <div class="col mb-4"*ngIf="products.length>0 else noProduct"> -->
