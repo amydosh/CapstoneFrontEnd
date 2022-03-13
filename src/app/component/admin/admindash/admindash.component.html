@@ -1,0 +1,148 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Admin Dashboard</h1>
+    <p class="lead">Welcome to the Admin Dashboard!</p>
+  </div>
+</div>
+
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" *ngIf="adminmessage=='Product successfully created!'">
+  <div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="...">
+    <strong class="mr-auto">Succcess!</strong>
+    <small>Just now</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    New Product successfully created!
+  </div>
+</div>
+
+<!-- <div class="alert alert-success" role="alert">
+  {{adminmessage}}
+</div> -->
+
+<nav class="mt-5">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-link active" id="nav-home-tab" data-toggle="tab" (click)="viewMode='product'" role="tab" aria-controls="nav-home" aria-selected="true">Product Dashboard</a>
+      <a class="nav-link" id="nav-profile-tab" data-toggle="tab" (click)="viewMode='adminact'" role="tab" aria-controls="nav-profile" aria-selected="false">Admin Account</a>
+      <a class="nav-link" id="nav-contact-tab" data-toggle="tab" (click)="viewMode='users'" role="tab" aria-controls="nav-contact" aria-selected="false">Registered Users</a>
+      <a class="nav-link" id="nav-contact-tab" data-toggle="tab" (click)="viewMode='viewpurchases'" role="tab" aria-controls="nav-purchases" aria-selected="false">View Purchases</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent" [ngSwitch]="viewMode">
+    <div class="tab-pane fade show active mt-5" *ngSwitchCase="'product'" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        You can view, modify and delete product information below.<br>
+        To create a new product, click <a href="/products/create">here.</a>
+        <div class="container mt-5">
+            <div class="card-deck"*ngIf="products.length>0">
+                <div class="card" *ngFor="let product of products">
+                <img src={{product.img}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- The bbelow is binding a variable called bgColor to the background color -->
+                    <!-- <h5 class="card-title" [ngStyle]="{'color':'brown', 'background-color':bgColor}">{{product.id}} {{product.name}}</h5> -->
+                    <h5 class="card-title">{{product.id}} - {{product.name}}</h5>
+                    <!-- <p class="card-text">Description: {{product.description}}</p> -->
+                    <!-- <p class="card-text">{{product.price}}</p> -->
+                </div>
+                <div class="card-footer">
+                    <p class="card-text">
+                    <small class="text-muted">Price: ${{product.price}}</small><br>
+                    <small class="text-muted">Quantity: {{product.pquant}}</small>
+                    <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+                    <a (click)="onEdit(product)" class="badge badge-warning mr-2">Edit</a>
+                    <a (click)="onDelete(product.id)" class="badge badge-danger">Delete</a>
+                    </p>
+                </div>
+                </div>
+            </div>
+            <!-- </ng-template> -->
+            </div>
+            </div>
+    <div class="mt-5" *ngSwitchCase="'adminact'" id="nav-profile"  role="tabpanel" aria-labelledby="nav-profile-tab">
+      You can view, modify and delete admin info below.
+            <div class="container mt-5">
+                <div class="card-deck" *ngIf="admins.length>0">
+                    <div class="card" *ngFor="let admin of admins">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{admin.adminID}} - {{admin.adminUN}} </h5>
+                        <!-- <p class="card-text">Email: {{admin.email}}</p> -->
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text">
+                        <!-- <small class="text-muted">Location: {{user.state}} {{user.zipcode}}</small><br> -->
+                        <!-- <small class="text-muted">Quantity: {{product.quantity}}</small> -->
+                        <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+                        <a (click)="onEditAdmin(admin)" class="badge badge-warning mr-2">Edit Admin</a>
+                        <a (click)="onDeleteAdmin(admin.adminID)" class="badge badge-danger">Delete Admin</a>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+    </div>
+    <div class="mt-5" id="nav-contact" *ngSwitchCase="'users'" role="tabpanel" aria-labelledby="nav-contact-tab">
+      You can view, modify and delete existing user info below.
+            <div class="container mt-5">
+                <div class="card-deck" *ngIf="users.length>0">
+                    <div class="card" *ngFor="let user of users">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{user.id}} - {{user.firstName}} {{user.lastName}}</h5>
+                        <p class="card-text">Email: {{user.email}}</p>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text">
+                        <small class="text-muted">Location: {{user.state}} {{user.zipcode}}</small><br>
+                        <!-- <small class="text-muted">Quantity: {{product.quantity}}</small> -->
+                        <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+                        <a (click)="onEditUser(user)" class="badge badge-warning mr-2">Edit User</a>
+                        <a (click)="onDeleteUser(user.id)" class="badge badge-danger">Delete User</a>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <!-- </ng-template> -->
+                </div>
+                </div>
+
+                <div class="mt-5" *ngSwitchCase="'viewpurchases'" id="nav-profile"  role="tabpanel" aria-labelledby="nav-profile-tab">
+                  You can view purchase info below.
+                        <div class="container mt-5">
+                            <div class="card-deck" *ngIf="purchases.length>0">
+                                <div class="card" *ngFor="let purchase of purchases">
+                                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                                <div class="card-body">
+                                    <h5 class="card-title">{{purchase.id}} - {{purchase.userinfo}} </h5>
+                                    <p class="card-text">Total: {{purchase.total}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <p class="card-text">
+                                    <!-- <small class="text-muted">Location: {{user.state}} {{user.zipcode}}</small><br> -->
+                                    <!-- <small class="text-muted">Quantity: {{product.quantity}}</small> -->
+                                    <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+                                    <!-- <a (click)="onEditAdmin(admin)" class="badge badge-warning mr-2">Edit Admin</a>
+                                    <a (click)="onDeleteAdmin(admin.adminID)" class="badge badge-danger">Delete Admin</a> -->
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+    </div>
+
+
+
+
+      <!-- The below is an example of a sort-of else statement -->
+      <!-- <div class="card-deck" *ngIf="products.length == 0">
+        <p>Products list is empty</p>
+      </div> -->
+    
+      <!-- This is a true else statment -->
+    <!-- <ng-template #noProduct>
+      <p class="alert alert-warning">Products list is empty</p>
+    </ng-template> -->
+    <!-- </div> -->

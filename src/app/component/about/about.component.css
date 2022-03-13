@@ -1,0 +1,13 @@
+.row{
+    display: flex;
+    margin-left: auto;
+    /* justify-content: center; */
+}
+
+.img{
+    align-items: center;
+    /* width:max-content;; */
+}
+
+    
+    

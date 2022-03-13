@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <div class="card-deck"*ngIf="users.length>0 else noUsers">
+        <div class="card" *ngFor="let user of users">
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <!-- The bbelow is binding a variable called bgColor to the background color -->
+            <!-- <h5 class="card-title" [ngStyle]="{'color':'brown', 'background-color':bgColor}">{{product.id}} {{product.name}}</h5> -->
+            <h5 class="card-title">{{user.id}} - {{user.firstName}}</h5>
+            <p class="card-text">Email: {{user.email}}</p>
+            <!-- <p class="card-text">{{product.price | currency:'INR'}}</p> -->
+          </div>
+          <div class="card-footer">
+            <p class="card-text">
+              <!-- <small class="text-muted">Price: ${{product.price}}</small><br>
+              <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+              <a (click)="onEdit(user)" class="badge badge-warning mr-2">Edit</a>
+              <a (click)="onDelete(user.id)" class="badge badge-danger">Delete</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- The below is an example of a sort-of else statement -->
+      <!-- <div class="card-deck" *ngIf="products.length == 0">
+        <p>Products list is empty</p>
+      </div> -->
+    
+      <!-- This is a true else statment -->
+    <ng-template #noUsers>
+      <p class="alert alert-warning">Users list is empty</p>
+    </ng-template>
+    </div>
+    
+    <!-- <nav class="mt-5">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" (click)="viewMode='default'" role="tab" aria-controls="nav-home" aria-selected="true">Default</a>
+        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" (click)="viewMode='list'" role="tab" aria-controls="nav-profile" aria-selected="false">List</a>
+        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" (click)="viewMode='map'" role="tab" aria-controls="nav-contact" aria-selected="false">Map</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent" [ngSwitch]="viewMode">
+      <div class="tab-pane fade show active" *ngSwitchCase="'default'" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        The default data here.
+      </div>
+      <div class="" *ngSwitchCase="'list'" id="nav-profile"  role="tabpanel" aria-labelledby="nav-profile-tab">
+        The list data is visible here.
+      </div>
+      <div class="" id="nav-contact" *ngSwitchCase="'map'" role="tabpanel" aria-labelledby="nav-contact-tab">
+        The map data is visible here.
+      </div>
+    </div> -->

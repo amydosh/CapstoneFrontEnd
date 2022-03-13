@@ -1,0 +1,158 @@
+{
+  "oldproducts": [
+    {
+      "id": 102,
+      "name": "dell book",
+      "description": "2022 dell book laptop black UDPATED",
+      "price": 1382.23
+    },
+    {
+      "id": 103,
+      "name": "dell book",
+      "description": "2022 dell book laptop black UPDATED",
+      "price": 957.21,
+      "quantity": 37
+    },
+    {
+      "id": 104,
+      "name": "dell book",
+      "description": "2022 dell book laptop black",
+      "price": 957.21,
+      "quantity": 23
+    },
+    {
+      "id": 105,
+      "name": "dell book",
+      "description": "2022 dell book laptop black updated",
+      "price": 234.33,
+      "quantity": 532
+    },
+    {
+      "id": 123,
+      "name": "new product",
+      "description": "asdlfkjasldkfj",
+      "price": 452.21,
+      "quantity": 262
+    },
+    {
+      "id": 999,
+      "name": "another new",
+      "description": "new product 32",
+      "price": 546.21,
+      "quantity": 395
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Kyla",
+      "lastName": "Mydosh",
+      "password": "statefan1",
+      "email": "ky.mydosh@gmail.com",
+      "state": "NY",
+      "zipcode": 27012,
+      "agree": true,
+      "id": 1
+    },
+    {
+      "firstName": "Andie",
+      "lastName": "Mydosh",
+      "password": "statefan1",
+      "email": "amydosh@gmail.com",
+      "state": "NY",
+      "zipcode": 27006,
+      "agree": true,
+      "id": 2
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Mydosh",
+      "password": "statefan1",
+      "email": "jmydosh@gmail.com",
+      "state": "NY",
+      "zipcode": 27006,
+      "agree": true,
+      "id": 3
+    }
+  ],
+  "payments": [],
+  "products": [
+    {
+      "id": 101,
+      "name": "Banana",
+      "price": "0.87",
+      "img": "https://image.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-600w-1722111529.jpg",
+      "pquant": 89
+    },
+    {
+      "id": 102,
+      "img": "https://image.shutterstock.com/image-photo/red-apple-isolated-on-white-600w-1727544364.jpg",
+      "name": "Apple",
+      "price": 0.89,
+      "pquant": 111
+    },
+    {
+      "id": 103,
+      "img": "https://image.shutterstock.com/image-photo/isolated-pears-one-half-green-600w-1494561377.jpg",
+      "name": "Pear",
+      "price": 0.97,
+      "pquant": 83
+    },
+    {
+      "id": 104,
+      "img": "https://image.shutterstock.com/image-photo/juicy-red-plum-fruits-cut-600w-1661209357.jpg",
+      "name": "Plum",
+      "price": 0.54,
+      "pquant": 116
+    },
+    {
+      "id": 105,
+      "img": "https://image.shutterstock.com/image-photo/peach-isolate-slice-leaf-on-600w-1550458292.jpg",
+      "name": "Peach",
+      "price": 0.93,
+      "pquant": 72
+    }
+  ],
+  "admins": [
+    {
+      "adminID": 1,
+      "adminUN": "admin1",
+      "adminPW": "pw1"
+    },
+    {
+      "adminID": 2,
+      "adminUN": "admin2",
+      "adminPW": "pw1"
+    }
+  ],
+  "purchases": [
+    {
+      "tx": 0,
+      "numitems": 4,
+      "userinfo": "amydosh@gmail.com",
+      "total": 3.75,
+      "id": 1
+    },
+    {
+      "tx": 0,
+      "numitems": 4,
+      "userinfo": "amydosh@gmail.com",
+      "total": 3.75,
+      "id": 2
+    },
+    {
+      "tx": 0,
+      "numitems": 4,
+      "userinfo": "jmydosh@gmail.com",
+      "total": 10.97,
+      "id": 3
+    },
+    {
+      "tx": 0,
+      "numitems": 4,
+      "userinfo": "jdoe@gmail.com",
+      "total": 102.32,
+      "id": 4
+    }
+  ],
+  "cart": []
+}

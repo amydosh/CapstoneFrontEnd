@@ -1,0 +1,72 @@
+<div class="row row-cols-2 row-cols-md-2">
+  <div class="col mb-4"*ngIf="products.length>0 else noProduct">
+    <div class="card" *ngFor="let product of products">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">{{product.id}} - {{product.name | uppercase}}</h5>
+        <p class="card-text">Description: {{product.description}}</p>
+      </div>
+      <div class="card-footer">
+        <p class="card-text">
+          <small class="text-muted">Price: ${{product.price}}</small><br>
+          <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+          <a (click)="onEdit(product)" class="badge badge-warning mr-2">Edit</a><br>
+          <a (click)="onDelete(product.id)" class="badge badge-danger">Delete</a><br>
+        </p>
+      </div>
+    </div>
+  </div>
+ 
+
+
+<!-- <div class="container mt-5">
+<div class="card-deck"*ngIf="products.length>0 else noProduct">
+    <div class="card" *ngFor="let product of products"> -->
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <!-- <div class="card-body"> -->
+        <!-- The bbelow is binding a variable called bgColor to the background color -->
+        <!-- <h5 class="card-title" [ngStyle]="{'color':'brown', 'background-color':bgColor}">{{product.id}} {{product.name}}</h5> -->
+        <!-- <h5 class="card-title">{{product.id}} - {{product.name | uppercase}}</h5>
+        <p class="card-text">Description: {{product.description}}</p> -->
+        <!-- <p class="card-text">{{product.price}}</p> -->
+      <!-- </div>
+      <div class="card-footer">
+        <p class="card-text">
+          <small class="text-muted">Price: ${{product.price}}</small><br> -->
+          <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
+          <!-- <a (click)="onEdit(product)" class="badge badge-warning mr-2">Edit</a><br>
+          <a (click)="onDelete(product.id)" class="badge badge-danger">Delete</a><br>
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- The below is an example of a sort-of else statement -->
+  <!-- <div class="card-deck" *ngIf="products.length == 0">
+    <p>Products list is empty</p>
+  </div> -->
+
+  <!-- This is a true else statment -->
+<ng-template #noProduct>
+  <p class="alert alert-warning">Products list is empty</p>
+</ng-template>
+</div>
+
+<!-- <nav class="mt-5">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" (click)="viewMode='default'" role="tab" aria-controls="nav-home" aria-selected="true">Default</a>
+    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" (click)="viewMode='list'" role="tab" aria-controls="nav-profile" aria-selected="false">List</a>
+    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" (click)="viewMode='map'" role="tab" aria-controls="nav-contact" aria-selected="false">Map</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent" [ngSwitch]="viewMode">
+  <div class="tab-pane fade show active" *ngSwitchCase="'default'" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    The default data here.
+  </div>
+  <div class="" *ngSwitchCase="'list'" id="nav-profile"  role="tabpanel" aria-labelledby="nav-profile-tab">
+    The list data is visible here.
+  </div>
+  <div class="" id="nav-contact" *ngSwitchCase="'map'" role="tabpanel" aria-labelledby="nav-contact-tab">
+    The map data is visible here.
+  </div>
+</div> -->

@@ -1,0 +1,63 @@
+<!-- Bootstrap Form with validation -->
+<div class="container form-container">
+    <h1 style="text-align: center;"> Update Admin Information Form</h1>
+    <form class="form-validate" novalidate [formGroup]="adminForm" (ngSubmit)="onSubmit(adminForm)">
+    
+  
+  <div class="form-row">
+    <!-- ID -->
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="id">Admin ID:</label>
+        <input type="number" class="form-control" name="id"  formControlName="id" id="id" aria-describedby="idHelp" readonly>
+        <!-- <small *ngIf="hasError('firstName')" [class]="hasError('firstName') ? 'has-error' :''">
+          <div *ngIf="firstName?.errors">
+              <span *ngIf="firstName?.errors?.['required']">First Name is a required field</span>
+              <span *ngIf="firstName?.errors?.['minlength']">First Name is a min 3 char long field</span>
+              <span *ngIf="firstName?.errors?.['maxlength']">First Name is a max 15 char long field</span>
+          </div>
+        </small> -->
+      </div>
+    </div>
+    </div>
+   <div class="form-row">
+      <!-- First Name -->
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label for="adminUN">Admin Username</label>
+          <input type="text" class="form-control" name="adminUN"  formControlName="adminUN" id="adminUN" aria-describedby="adminUNHelp" minlength="3" maxlength="30" required inputformatter>
+          <!-- <small *ngIf="hasError('firstName')" [class]="hasError('firstName') ? 'has-error' :''">
+            <div *ngIf="firstName?.errors">
+                <span *ngIf="firstName?.errors?.['required']">First Name is a required field</span>
+                <span *ngIf="firstName?.errors?.['minlength']">First Name is a min 3 char long field</span>
+                <span *ngIf="firstName?.errors?.['maxlength']">First Name is a max 15 char long field</span>
+            </div>
+          </small> -->
+        </div>
+      </div>
+       <!-- Last Name -->
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label for="adminPW">Password</label>
+          <input type="text" class="form-control" name="adminPW" id="adminPW" formControlName="adminPW" aria-describedby="adminPWHelp"  minlength="3" maxlength="15" required inputformatter>
+          <!-- <small *ngIf="hasError('lastName')" [class]="hasError('lastName') ? 'has-error' :''">
+            <div *ngIf="lastName?.errors">
+                <span *ngIf="lastName?.errors?.['required']">Last Name is a required field</span>
+                <span *ngIf="lastName?.errors?.['minlength']">Last Name is a min 3 char long field</span>
+                <span *ngIf="lastName?.errors?.['maxlength']">Last Name is a max 15 char long field</span>
+            </div>
+          </small> -->
+        </div>
+      </div>
+   </div>
+  
+   
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <button type="submit" class="btn btn-info btn-block" >Submit Changes</button>
+      </div>
+      <div class="col-3"></div>
+    </div>
+    </form>
+  </div>

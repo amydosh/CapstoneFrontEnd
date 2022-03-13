@@ -1,0 +1,73 @@
+<!-- Bootstrap Form with validation -->
+<div class="container form-container">
+  <h1 style="text-align: center;">Admin Login Form</h1>
+  <div *ngIf="message!=''" class="alert alert-danger" role="alert">
+    ERROR! {{message}}
+  </div>
+  <form  class="form-validate" novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+  
+   <div class="form-row">
+   <div class="col-sm-3"></div>
+      <!-- Email -->
+     <div class="col-sm-6">
+      <div class="form-group">
+        <label for="adminUN">Admin Username</label>
+        <input type="text" class="form-control" name="adminUN" id="adminUN" formControlName="adminUN"
+        aria-describedby="adminUNHelp" inputformatter>
+        <small *ngIf="hasError('adminUN')" [class]="hasError('adminUN') ? 'has-error' :''">
+          <div *ngIf="adminUN?.errors">
+              <span *ngIf="adminUN?.errors?.['required']">Username is a required field</span>
+              <span *ngIf="adminUN?.errors?.['minlength']">Username is a min 3 char long field</span>
+              <span *ngIf="adminUN?.errors?.['maxlength']">Username is a max 20 char long field</span>
+          </div>
+        </small>
+      </div>
+     </div>
+     <div class="col-sm-3"></div>
+  </div>
+  <div class="form-row">
+      <div class="col-sm-3"></div>
+     <!-- Password -->
+     <div class="col-sm-6">
+      <div class="form-group">
+        <label for="adminPW">Password</label>
+        <input type="password" class="form-control" name="adminPW" id="adminPW" formControlName="adminPW"  aria-describedby="adminPWHelp" >
+        <small *ngIf="hasError('adminPW')" [class]="hasError('adminPW') ? 'has-error' :''">
+          <div *ngIf="adminPW?.errors">
+              <span *ngIf="adminPW?.errors?.['required']">Password is a required field</span>
+              <span *ngIf="adminPW?.errors?.['minlength']">Password is a min 2 char long field</span>
+              <span *ngIf="adminPW?.errors?.['maxlength']">Password is a max 15 char long field</span>
+          </div>
+        </small>
+      </div>
+     </div>
+     <div class="col-sm-3"></div>
+   </div>
+
+   <div class="form-row">
+      <div class="col-sm-3"></div>
+      <div class="form-group col-sm-6">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="rememberme"  name="rememberme"  formControlName="rememberme" >
+          <label class="form-check-label" for="rememberme">
+           Remember me !
+          </label>
+          <!-- <small *ngIf="hasError('rememberme')" [class]="hasError('rememberme') ? 'has-error' :''">
+            <div *ngIf="rememberme?.errors">
+                <span *ngIf="rememberme?.errors?.['required']"> Please check this for rememberme conditions!</span>
+            </div>
+          </small> -->
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <button type="submit" class="btn btn-info btn-block" >Submit</button>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  </form>
+</div>

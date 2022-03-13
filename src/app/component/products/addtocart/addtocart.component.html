@@ -1,0 +1,57 @@
+<div class="row row-cols-2 row-cols-md-2 mt-3">
+  <div class="row" *ngIf="message!=''">{{this.message}}</div>
+    <div class="col mb-4" *ngIf="cart.length>0 else noProduct">
+      <!-- <div class="container" *ngFor="let i=0; i<cart.length; i++"> -->
+      <!-- <div class="card" *ngFor="let i of cart, let ind of cart.length"> -->
+        
+        <!-- <script>
+          let item = this.cart;
+          console.log(item);
+        </script> -->
+        <div class="card mt-2" *ngFor="let i of cart">
+          <!-- <img src={{i.itemImg}} class="card-img-top" alt="..."> -->
+          <!-- <div class="container" *ngFor="let p of i"> -->
+        <div class="card-body">
+
+          <h5 class="card-title">SKU: {{i.tx}} - Product: {{i.pname | uppercase}}</h5>
+          <p class="card-text">Price: {{i.pprice | currency}}</p>
+        </div>
+        <div class="card-footer">
+          <p class="card-text">
+            <small class="text-muted">Quantity: {{i.pquant}}</small><br> 
+            <a (click)="onDelete(i.id)" class="badge badge-danger">Delete</a><br>
+          </p>
+        </div>
+      <!-- </div> -->
+    </div><br>
+      <b>Total Price:</b> {{totalPrice | currency}}
+      <!-- <div class="container mt-4">
+        <a class="btn btn-success" (click)="onCheckout(cart)" role="button">Click here to Checkout!</a>
+      </div> -->
+      <div class="container mt-2">
+        <a class="btn btn-success" href="/checkout" role="button">Click here to Checkout!</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row"> -->
+    <div class="container-fluid mt-3">To return to the shopping page, please click <a href="products/list">here.</a></div>
+  <!-- </div> -->
+
+  
+
+  
+  
+  
+    <!-- This is a true else statment -->
+  <ng-template #noProduct>
+    <div class="container-fluid" *ngIf="loggedIn==false">
+      You must be logged in in order to shop. <br>
+      <a class="btn btn-secondary" href="/login" role="button">Click here to Login!</a>
+    </div>
+    <div class="container-fluid" *ngIf="loggedIn==true">
+      <p class="alert alert-warning">Your cart is currently empty!</p><br>
+      <a class="btn btn-secondary" href="/products/list" role="button">Click here to Shop!</a>
+    </div>
+  </ng-template>
+  
