@@ -21,10 +21,17 @@ export class ListComponent implements OnInit {
  public loggedIn:boolean=false;
 //  public p:string[] = [];
  public cart: Cart = {
-  tx:0,
-  pname:'',
-  pprice:0,
-  pquant:0
+  // tx:0,
+  // pname:'',
+  // pprice:0,
+  // pquant:0
+  id:0,
+  movietitle:'',
+  summary:'',
+  ticketprice:0,
+  showtime:''
+
+
 }
 
  
@@ -69,20 +76,21 @@ export class ListComponent implements OnInit {
   public updateproduct:any;
   public message:string='';
   onAdd(product:any){
-    console.log("Add to cart triggered for :"+product.name);
-    console.log("Item is $:"+product.price);
+    console.log("Add to cart triggered for :"+product.movietitle);
+    console.log("Item is $:"+product.ticketprice);
     console.log("Item ID is: "+product.id);
-    let remain = (product.pquant)-1;
-    console.log("Quantity of product remaining: "+remain);
+    // let remain = (product.pquant)-1;
+    // console.log("Quantity of product remaining: "+remain);
 
-    this.cart.tx = product.id;
-    this.cart.pname = product.name;
-    this.cart.pprice = product.price;
-    this.cart.pquant = 1;
+    this.cart.id = product.id;
+    this.cart.movietitle = product.movietitle;
+    this.cart.ticketprice = product.ticketprice;
+    this.cart.showtime = product.showtime;
+    // this.cart.pquant = 1;
 
     this.updateproduct = product;
     this.updateproduct.id = product.id;
-    this.updateproduct.pquant = remain;
+    // this.updateproduct.pquant = remain;
     console.log(this.updateproduct);
     
     // Update the amount of product remaining in the database:
@@ -105,10 +113,16 @@ export class ListComponent implements OnInit {
 }
 
   interface Cart {
-    tx:number,
-    pname:string,
-    pprice:number,
-    pquant:number
+    // tx:number,
+    // pname:string,
+    // pprice:number,
+    // pquant:number
+
+    id:number,
+    movietitle:string,
+    summary:string,
+    ticketprice:number,
+    showtime:string
   }
 
 

@@ -46,7 +46,7 @@
     {
       "firstName": "Kyla",
       "lastName": "Mydosh",
-      "password": "statefan1",
+      "password": "pw1234",
       "email": "ky.mydosh@gmail.com",
       "state": "NY",
       "zipcode": 27012,
@@ -56,7 +56,7 @@
     {
       "firstName": "Andie",
       "lastName": "Mydosh",
-      "password": "statefan1",
+      "password": "pw1234",
       "email": "amydosh@gmail.com",
       "state": "NY",
       "zipcode": 27006,
@@ -66,7 +66,7 @@
     {
       "firstName": "Joe",
       "lastName": "Mydosh",
-      "password": "statefan1",
+      "password": "pw1234",
       "email": "jmydosh@gmail.com",
       "state": "NY",
       "zipcode": 27006,
@@ -78,38 +78,35 @@
   "products": [
     {
       "id": 101,
-      "name": "Banana",
-      "price": "0.87",
-      "img": "https://image.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-600w-1722111529.jpg",
-      "pquant": 89
+      "movietitle": "Us",
+      "ticketprice": 15,
+      "summary": "In 1986, a young girl named Adelaide—Addy for short—watches a commercial for Hands Across America. At night, at the Santa Cruz Beach Boardwalk, she wanders away from her parents and enters a funhouse, where she encounters a doppelgänger of herself in the house of mirrors.",
+      "img": "https://collider.com/wp-content/uploads/2017/06/us-poster.jpg",
+      "showtime": "May 31 - 7:30pm"
     },
     {
       "id": 102,
-      "img": "https://image.shutterstock.com/image-photo/red-apple-isolated-on-white-600w-1727544364.jpg",
-      "name": "Apple",
-      "price": 0.89,
-      "pquant": 111
+      "movietitle": "The Goonies",
+      "summary": "Facing foreclosure of their homes in the Goon Docks area of Astoria, Oregon, to an expanding country club, a group of children who call themselves the Goonies, gather for a final weekend together. The Goonies include optimist lead Goonie Mikey Walsh, his older brother Brandon, the inventive Data, the talkative Mouth, and the klutz Chunk.",
+      "ticketprice": 15,
+      "showtime": "June 1 - 7:30pm",
+      "img": "https://imgc.allpostersimages.com/img/posters/the-goonies_u-L-F4S7HY0.jpg?artPerspective=n"
     },
     {
       "id": 103,
-      "img": "https://image.shutterstock.com/image-photo/isolated-pears-one-half-green-600w-1494561377.jpg",
-      "name": "Pear",
-      "price": 0.97,
-      "pquant": 83
+      "movietitle": "Joker",
+      "summary": "In 1981, party clown and aspiring stand-up comedian Arthur Fleck lives with and cares for his mother, Penny, in crime-ridden Gotham City amidst a recession. Arthur suffers from a neurological disorder that causes him to laugh uncontrollably at inappropriate times, requiring medication, for which he depends on social services. After Arthur is attacked by juvenile delinquents, his co-worker Randall gives him a revolver for self-defense. Arthur pursues a relationship with his neighbor, single mother Sophie, and invites her to see his routine at Pogo's comedy club. At a children's hospital, Arthur is fired when his revolver is exposed. Depressed on the subway, still in clown makeup, Arthur witnessed drunk businessmen harassing a woman, and then is beaten by the drunk businessmen from Wayne Investments; he shoots and kills two of them in self-defense and murders the third as he attempts to flee. The killings are condemned by billionaire mayoral candidate Thomas Wayne, who calls his political opponents clowns. Protesters react by donning clown masks in Arthur's image. Budget cuts shut down the social service program, leaving Arthur without medication.",
+      "ticketprice": 15,
+      "showtime": "June 2 - 9:30pm",
+      "img": "https://creativereview.imgix.net/content/uploads/2019/12/joker_full.jpg?auto=compress,format&q=60&w=1012&h=1500"
     },
     {
       "id": 104,
-      "img": "https://image.shutterstock.com/image-photo/juicy-red-plum-fruits-cut-600w-1661209357.jpg",
-      "name": "Plum",
-      "price": 0.54,
-      "pquant": 116
-    },
-    {
-      "id": 105,
-      "img": "https://image.shutterstock.com/image-photo/peach-isolate-slice-leaf-on-600w-1550458292.jpg",
-      "name": "Peach",
-      "price": 0.93,
-      "pquant": 72
+      "movietitle": "Back to the Future",
+      "summary": "Back to the Future is a 1985 American science fiction film directed by Robert Zemeckis, and written by Zemeckis and Bob Gale. It stars Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover, and Thomas F. Wilson. Set in 1985, the story follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Doctor Emmett Doc Brown (Lloyd). Trapped in the past, Marty inadvertently prevents his future parents' meeting—threatening his existence—and is forced to reconcile the pair and somehow get back to the future.",
+      "ticketprice": 15,
+      "showtime": "June 3 - 7:30pm",
+      "img": "https://m.media-amazon.com/images/I/71BPuv+iRbL._AC_SY741_.jpg"
     }
   ],
   "admins": [
@@ -152,7 +149,29 @@
       "userinfo": "jdoe@gmail.com",
       "total": 102.32,
       "id": 4
+    },
+    {
+      "tx": 0,
+      "numitems": 2,
+      "userinfo": "amydosh@gmail.com",
+      "total": 30,
+      "id": 5
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 102,
+      "movietitle": "The Goonies",
+      "summary": "",
+      "ticketprice": 15,
+      "showtime": "June 1 - 7:30pm"
+    },
+    {
+      "id": 104,
+      "movietitle": "Back to the Future",
+      "summary": "",
+      "ticketprice": 15,
+      "showtime": "June 3 - 7:30pm"
+    }
+  ]
 }

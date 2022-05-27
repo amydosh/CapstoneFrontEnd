@@ -11,13 +11,14 @@
         <div class="card-body">
           <!-- <label for="id" class="card-title">{{product.id}} </label> -->
           <!-- <label for="pname" class="card-title">{{product.id | uppercase}} </label> -->
-          <p class="card-text">SKU: {{product.id}} - {{product.name | uppercase}}</p>
-          <!-- <p class="card-text">Description: {{product.description}}</p> -->
+          <p class="card-text">{{product.id}} - {{product.movietitle | uppercase}}</p>
+          <p class="card-text">Summary: {{product.summary}}</p>
         </div>
         <div class="card-footer">
           <p class="card-text">
-            <small class="text-muted">Price: {{product.price | currency}}</small><br>
-            <small class="text-muted">Quantity Available: {{product.pquant}}</small><br>
+            <small class="text-muted">Price: {{product.ticketprice | currency}}</small><br>
+            <small class="text-muted">Show Time: {{product.showtime}}</small><br>
+            <!-- <small class="text-muted">Quantity Available: {{product.pquant}}</small><br> -->
             <a (click)="onAdd(product)" class="badge badge-warning mr-2">Add to Cart</a><br>
             <!-- <a class="badge badge-warning mr-2">Add to Cart</a><br> -->
           </p>

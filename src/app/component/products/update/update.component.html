@@ -8,7 +8,7 @@
         <!-- Product Id -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="id">Product SKU:</label>
+          <label for="id">ID:</label>
           <input type="number" class="form-control" name="id" id="id" formControlName="id"
           aria-describedby="idHelp">
           <!-- <small *ngIf="hasError('email')" [class]="hasError('email') ? 'has-error' :''">
@@ -30,8 +30,8 @@
        <!-- Product Name -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="name">Product Name</label>
-          <input type="text" class="form-control" name="name" id="name" formControlName="name"  aria-describedby="nameHelp" >
+          <label for="movietitle">Movie Title</label>
+          <input type="text" class="form-control" name="movietitle" id="movietitle" formControlName="movietitle"  aria-describedby="movietitleHelp" >
           <!-- <small *ngIf="hasError('password')" [class]="hasError('password') ? 'has-error' :''">
             <div *ngIf="password?.errors">
                 <span *ngIf="password?.errors?.['required']">Password is a required field</span>
@@ -50,7 +50,7 @@
      <!-- Product Image -->
      <div class="col-sm-6">
       <div class="form-group">
-        <label for="img">Product Image:</label>
+        <label for="img">Movie Poster URL</label>
         <input type="text" class="form-control" name="img" id="img" formControlName="img"  aria-describedby="imgHelp" >
         <!-- <small *ngIf="hasError('password')" [class]="hasError('password') ? 'has-error' :''">
           <div *ngIf="password?.errors">
@@ -69,8 +69,8 @@
        <!-- Product Price -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="price">Price</label>
-          <input type="number" class="form-control" name="price" id="price" formControlName="price"  aria-describedby="priceHelp" >
+          <label for="ticketprice">Ticket Price</label>
+          <input type="number" class="form-control" name="ticketprice" id="ticketprice" formControlName="ticketprice"  aria-describedby="ticketpriceHelp" >
           <!-- <small *ngIf="hasError('password')" [class]="hasError('password') ? 'has-error' :''">
             <div *ngIf="password?.errors">
                 <span *ngIf="password?.errors?.['required']">Password is a required field</span>
@@ -88,8 +88,8 @@
      <!-- Product Quantity -->
      <div class="col-sm-6">
       <div class="form-group">
-        <label for="pquant">Quantity</label>
-        <input type="number" class="form-control" name="pquant" id="pquant" formControlName="pquant"  aria-describedby="pquantHelp" >
+        <label for="summary">Summary</label>
+        <input type="text" class="form-control" name="summary" id="summary" formControlName="summary"  aria-describedby="summaryHelp" >
         <!-- <small *ngIf="hasError('password')" [class]="hasError('password') ? 'has-error' :''">
           <div *ngIf="password?.errors">
               <span *ngIf="password?.errors?.['required']">Password is a required field</span>
@@ -101,6 +101,25 @@
      </div>
      <div class="col-sm-3"></div>
    </div>
+
+   <div class="form-row">
+    <div class="col-sm-3"></div>
+   <!-- Product Quantity -->
+   <div class="col-sm-6">
+    <div class="form-group">
+      <label for="showtime">Show Time</label>
+      <input type="text" class="form-control" name="showtime" id="showtime" formControlName="showtime"  aria-describedby="showtimeHelp" >
+      <!-- <small *ngIf="hasError('password')" [class]="hasError('password') ? 'has-error' :''">
+        <div *ngIf="password?.errors">
+            <span *ngIf="password?.errors?.['required']">Password is a required field</span>
+            <span *ngIf="password?.errors?.['minlength']">Password is a min 6 char long field</span>
+            <span *ngIf="password?.errors?.['maxlength']">Password is a max 15 char long field</span>
+        </div>
+      </small> -->
+    </div>
+   </div>
+   <div class="col-sm-3"></div>
+ </div>
 
 
   

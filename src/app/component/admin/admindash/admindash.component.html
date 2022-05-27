@@ -42,14 +42,14 @@
                 <div class="card-body">
                     <!-- The bbelow is binding a variable called bgColor to the background color -->
                     <!-- <h5 class="card-title" [ngStyle]="{'color':'brown', 'background-color':bgColor}">{{product.id}} {{product.name}}</h5> -->
-                    <h5 class="card-title">{{product.id}} - {{product.name}}</h5>
-                    <!-- <p class="card-text">Description: {{product.description}}</p> -->
+                    <h5 class="card-title">{{product.id}} - {{product.movietitle}}</h5>
+                    <p class="card-text">Summary: {{product.summary}}</p>
                     <!-- <p class="card-text">{{product.price}}</p> -->
                 </div>
                 <div class="card-footer">
                     <p class="card-text">
-                    <small class="text-muted">Price: ${{product.price}}</small><br>
-                    <small class="text-muted">Quantity: {{product.pquant}}</small>
+                    <small class="text-muted">Price: ${{product.ticketprice}}</small><br>
+                    <small class="text-muted">Showtime: {{product.showtime}}</small>
                     <!-- <small class="text-muted">Last Updated {{currentDateTime | date: 'shortDate'}}</small><br> -->
                     <a (click)="onEdit(product)" class="badge badge-warning mr-2">Edit</a>
                     <a (click)="onDelete(product.id)" class="badge badge-danger">Delete</a>

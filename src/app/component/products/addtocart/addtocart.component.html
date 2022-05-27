@@ -13,12 +13,13 @@
           <!-- <div class="container" *ngFor="let p of i"> -->
         <div class="card-body">
 
-          <h5 class="card-title">SKU: {{i.tx}} - Product: {{i.pname | uppercase}}</h5>
-          <p class="card-text">Price: {{i.pprice | currency}}</p>
+          <h5 class="card-title">{{i.id}} - {{i.movietitle | uppercase}}</h5>
+          <p class="card-text">Price: {{i.ticketprice | currency}}</p>
+          <!-- <p class="card-text">Summary: {{i.summary | currency}}</p> -->
         </div>
         <div class="card-footer">
           <p class="card-text">
-            <small class="text-muted">Quantity: {{i.pquant}}</small><br> 
+            <small class="text-muted">Show Time: {{i.showtime}}</small><br> 
             <a (click)="onDelete(i.id)" class="badge badge-danger">Delete</a><br>
           </p>
         </div>

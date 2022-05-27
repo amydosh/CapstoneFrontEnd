@@ -8,7 +8,7 @@
         <!-- Product Id -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="id">Product Id:</label>
+          <label for="id">ID:</label>
           <input type="text" class="form-control" name="id" id="id" formControlName="id"
           aria-describedby="idHelp">
           <!-- <small *ngIf="hasError('id')" [class]="hasError('id') ? 'has-error' :''">
@@ -27,8 +27,8 @@
        <!-- Product Name -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="name">Product Name</label>
-          <input type="text" class="form-control" name="name" id="name" formControlName="name"  aria-describedby="nameHelp" >
+          <label for="movietitle">Movie Title</label>
+          <input type="text" class="form-control" name="movietitle" id="movietitle" formControlName="movietitle"  aria-describedby="movietitleHelp" >
           <!-- <small *ngIf="hasError('name')" [class]="hasError('name') ? 'has-error' :''">
             <div *ngIf="name?.errors">
                 <span *ngIf="name?.errors?.['required']">Password is a required field</span>
@@ -39,14 +39,31 @@
        <div class="col-sm-3"></div>
      </div>
 
+     <div class="form-row">
+      <div class="col-sm-3"></div>
+     <!-- Product Name -->
+     <div class="col-sm-6">
+      <div class="form-group">
+        <label for="img">Movie Poster URL</label>
+        <input type="text" class="form-control" name="img" id="img" formControlName="img"  aria-describedby="imgHelp" >
+        <!-- <small *ngIf="hasError('name')" [class]="hasError('name') ? 'has-error' :''">
+          <div *ngIf="name?.errors">
+              <span *ngIf="name?.errors?.['required']">Password is a required field</span>
+          </div>
+        </small> -->
+      </div>
+     </div>
+     <div class="col-sm-3"></div>
+   </div>
+
 
     <div class="form-row">
         <div class="col-sm-3"></div>
        <!-- Product Description -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="description">Description</label>
-          <input type="text" class="form-control" name="description" id="description" formControlName="description"  aria-describedby="descriptionHelp" >
+          <label for="summary">Summary</label>
+          <input type="text" class="form-control" name="summary" id="summary" formControlName="summary"  aria-describedby="summaryHelp" >
           <!-- <small *ngIf="hasError('description')" [class]="hasError('description') ? 'has-error' :''">
             <div *ngIf="description?.errors">
                 <span *ngIf="description?.errors?.['required']">Password is a required field</span>
@@ -62,8 +79,8 @@
        <!-- Product Price -->
        <div class="col-sm-6">
         <div class="form-group">
-          <label for="price">Price</label>
-          <input type="text" class="form-control" name="price" id="price" formControlName="price"  aria-describedby="priceHelp" >
+          <label for="ticketprice">Ticket Price</label>
+          <input type="number" class="form-control" name="ticketprice" id="ticketprice" formControlName="ticketprice"  aria-describedby="ticketpriceHelp" >
           <!-- <small *ngIf="hasError('price')" [class]="hasError('price') ? 'has-error' :''">
             <div *ngIf="price?.errors">
                 <span *ngIf="price?.errors?.['required']">Price is a required field</span>
@@ -73,6 +90,23 @@
        </div>
        <div class="col-sm-3"></div>
      </div>
+
+     <div class="form-row">
+      <div class="col-sm-3"></div>
+     <!-- Product Price -->
+     <div class="col-sm-6">
+      <div class="form-group">
+        <label for="showtime">Show Time:</label>
+        <input type="text" class="form-control" name="showtime" id="showtime" formControlName="showtime"  aria-describedby="showtimeHelp" >
+        <!-- <small *ngIf="hasError('price')" [class]="hasError('price') ? 'has-error' :''">
+          <div *ngIf="price?.errors">
+              <span *ngIf="price?.errors?.['required']">Price is a required field</span>
+          </div>
+        </small> -->
+      </div>
+     </div>
+     <div class="col-sm-3"></div>
+   </div>
 
 
   

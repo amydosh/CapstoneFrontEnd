@@ -68,7 +68,7 @@ export class CheckoutComponent implements OnInit {
      for(let c=0; c<this.cart.length; c++){
        let cItem = this.cart[c];
        console.log(cItem);
-       let itemPrice = cItem.pprice;
+       let itemPrice = cItem.ticketprice;
        console.log("Item Price: "+itemPrice);
        this.totalPrice = itemPrice + this.totalPrice;
       //  console.log(this.cart);
